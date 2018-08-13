@@ -1,0 +1,72 @@
+{
+  "name": "users",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "state": {
+      "type": "string",
+      "required": true
+    },
+    "zip": {
+      "type": "number",
+      "required": true
+    },
+    "country": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "number",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "cardnumber": {
+      "type": "number",
+      "required": true
+    },
+    "expiredate": {
+      "type": "string",
+      "required": true
+    },
+    "cardcode": {
+      "type": "number",
+      "required": true
+    },
+    "subscription_id": {
+      "type": "number",
+      "value":" "
+    },
+    "subscription_status": {
+      "type": "string",
+      "value":" "
+    }
+  },
+  "hidden": ["realm","id","emailVerified","cardnumber","cardcode","expiredate"],
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+
+  }
+}

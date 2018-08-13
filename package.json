@@ -1,0 +1,52 @@
+{
+  "name": "signup-login-with-payment-gateway",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "start": "node .",
+    "posttest": "npm run lint && nsp check"
+  },
+  "author": {
+    "name": "atxwebdesigner1",
+    "email": "atxwebdesigner1@gmail.com"
+  },
+  "dependencies": {
+    "authorizenet": "^1.0.5",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "helmet": "^3.10.0",
+    "loopback": "^3.19.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^6.0.0",
+    "loopback-connector-mongodb": "^1.18.1",
+    "serve-favicon": "^2.0.1",
+    "strong-error-handler": "^3.0.0",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-loopback": "^8.0.0",
+    "nsp": "^2.1.0"
+  },
+  "repository": {
+     "type": "git",
+     "url": "git+https://github.com/nuevesolutions/signup-login-with-payment-gateway.git"
+   },
+   "keywords": [
+     "user",
+     "login",
+     "signup"
+   ],
+   "bugs": {
+     "url": "https://github.com/nuevesolutions/signup-login-with-payment-gateway/issues"
+   },
+   "license": "ISC",
+   "homepage": "https://github.com/nuevesolutionsot/signup-login-with-payment-gateway#readme",
+   "description": "signup-login-with-payment-gateway"
+ }
+ 
+ 
