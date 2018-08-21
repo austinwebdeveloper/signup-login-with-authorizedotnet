@@ -1,6 +1,6 @@
 {
-  "name": "signup-login-with-payment-gateway",
-  "version": "1.0.0",
+  "name": "signup-login-with-authorizedotnet",
+  "version": "1.0.1",
   "main": "server/server.js",
   "engines": {
     "node": ">=4"
@@ -15,6 +15,7 @@
     "email": "atxwebdesigner1@gmail.com"
   },
   "dependencies": {
+    "@sendgrid/mail": "^6.3.1",
     "authorizenet": "^1.0.5",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
@@ -22,7 +23,7 @@
     "loopback": "^3.19.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.0.0",
-    "loopback-connector-mongodb": "^1.18.1",
+    "loopback-connector-mongodb": "^3.5.0",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^3.0.0",
     "winston": "^3.0.0"
@@ -33,20 +34,20 @@
     "nsp": "^2.1.0"
   },
   "repository": {
-     "type": "git",
-     "url": "git+https://github.com/nuevesolutions/signup-login-with-payment-gateway.git"
-   },
-   "keywords": [
-     "user",
-     "login",
-     "signup"
-   ],
-   "bugs": {
-     "url": "https://github.com/nuevesolutions/signup-login-with-payment-gateway/issues"
-   },
-   "license": "ISC",
-   "homepage": "https://github.com/nuevesolutionsot/signup-login-with-payment-gateway#readme",
-   "description": "signup-login-with-payment-gateway"
- }
- 
- 
+    "type": "git",
+    "url": "git+https://github.com/nuevesolutions/signup-login-with-authorizedotnet.git"
+  },
+  "keywords": [
+    "user",
+    "login",
+    "signup",
+    "Payment Integration",
+    "Authorize.net"
+  ],
+  "bugs": {
+    "url": "https://github.com/nuevesolutions/signup-login-with-authorizedotnet/issues"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/nuevesolutionsot/signup-login-with-authorizedotnet#readme",
+  "description": "User signup login with authorize.net payment gateway"
+}

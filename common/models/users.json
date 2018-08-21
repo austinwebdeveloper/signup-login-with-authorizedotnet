@@ -6,67 +6,54 @@
     "validateUpsert": true
   },
   "properties": {
+    
     "firstname": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "lastname": {
+      "type": "string"
+    },
+    "username": {
       "type": "string",
       "required": true
     },
     "address": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
-    "city": {
-      "type": "string",
-      "required": true
+	"city": {
+      "type": "string"
     },
-    "state": {
-      "type": "string",
-      "required": true
-    },
-    "zip": {
-      "type": "number",
-      "required": true
+	"state": {
+      "type": "string"
     },
     "country": {
       "type": "string"
     },
+	"zip": {
+      "type": "number"  
+	  },
     "phone": {
-      "type": "number",
-      "required": true
+      "type": "number"
     },
-    "email": {
-      "type": "string",
-      "required": true
-    },
-    "cardnumber": {
-      "type": "number",
-      "required": true
+	"cardcode": {
+      "type": "string"
     },
     "expiredate": {
       "type": "string",
       "required": true
     },
-    "cardcode": {
+	"cardnumber": {
       "type": "number",
       "required": true
     },
-    "subscription_id": {
+	"interval_length": {
       "type": "number",
-      "value":" "
-    },
-    "subscription_status": {
-      "type": "string",
-      "value":" "
+      "required": true
     }
   },
-  "hidden": ["realm","id","emailVerified","cardnumber","cardcode","expiredate"],
+  "hidden":["realm","id","emailVerified","cardnumber","cardcode","expiredate"],
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {
-
-  }
+  "methods": {}
 }

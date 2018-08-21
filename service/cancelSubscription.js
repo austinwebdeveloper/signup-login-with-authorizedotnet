@@ -3,7 +3,6 @@
 var ApiContracts = require('authorizenet').APIContracts;
 var ApiControllers = require('authorizenet').APIControllers;
 var constants = require('../paymentKeysConfig.js');
-
 function cancelSubscription(subscriptionId, callback) {
 	var merchantAuthenticationType = new ApiContracts.MerchantAuthenticationType();
 	merchantAuthenticationType.setName(constants.apiLoginKey);

@@ -75,6 +75,7 @@ fs.rename(js_file,  __dirname +'/common/models/'+configuration.name+'.js', funct
 
 });
 });
+
 }); 
 
 });

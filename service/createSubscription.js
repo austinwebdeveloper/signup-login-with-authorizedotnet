@@ -6,6 +6,7 @@ var constants = require('../paymentKeysConfig.js');
 const loggingService = require('./loggingService');
 
 module.exports.createSubscription = function createSubscription (body,callback) {
+
 	
 	var merchantAuthenticationType = new ApiContracts.MerchantAuthenticationType();
 	merchantAuthenticationType.setName(constants.apiLoginKey);
