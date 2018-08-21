@@ -2,10 +2,10 @@
 The signup-login-with-authorizedotnet module is a Node.js based loopback script and it provides a fastest way to create user signup and login services with authentication and payment subscription with Authorize.net.
 
 
-# Pre-requisites
+## Pre-requisites
 Node.js , and the platform-specific tools needed to compile native NPM modules (which you may already have):
 
-### Installation
+## Installation
 
 To install the signup-login-with-authorizedotnet module, simply run the following command within your app's directory:
 
@@ -13,12 +13,12 @@ To install the signup-login-with-authorizedotnet module, simply run the followin
 npm i  signup-login-with-authorizedotnet --save
 ```
 
-### Development
+## Development
 
 ```sh
 var loopback = require("signup-login-with-authorizedotnet");
 ```
-Port Configuration:
+#### Port Configuration:
 
 ```sh
 
@@ -29,7 +29,7 @@ Example:
 ```sh
 var port = new loopback.port(8080);
 ``` 
-Database Configuration:
+### Database Configuration:
 
 ```sh
 var dbConfig = {"name":"","options":{	
@@ -49,7 +49,7 @@ var database = new loopback.datasource(dbConfig);
 
 #### Must follow below model properties configuration for payment integration with Authorize.net 
 
-Model Configuration:
+### Model Configuration:
 
 ```sh
 var modelConfig = {
@@ -105,7 +105,7 @@ var modelConfig = {
  var model = new loopback.model(modelConfig); 
 ```
 
-Set Authorize.net keys
+### Set Authorize.net keys
 
 ##### Note: if you havent created keys follow  https://support.authorize.net/s/article/How-do-I-obtain-my-API-Login-ID-and-Transaction-Key
 
@@ -117,6 +117,21 @@ var authorizekeys = {
  new loopback.paymentKeysConfig(authorizekeys)
  ```
 
+###  Authorize.net Merchant Details config
+
+
+```sh 
+var paymentconfig = {
+    "amount":"50",  // Amount of subscription
+    "trail_amount":"0", // Trail Amount of subscription
+    "interval_length":"1", // The measurement of time, in association with unit, that is used to define the frequency of the billing occurrences.(For a unit of days, use an integer between 7 and 365, inclusive. For a unit of months, use an integer between 1 and 12, inclusive.)
+    "interval_unit":"months" // The unit of time, in association with the length, between each billing occurrence.(days or moths)
+} 
+ new loopback.paymentConfig(paymentconfig)
+ ```
+ 
+ 
+ 
 #### Include following code in your index file:
  
 ```sh 
