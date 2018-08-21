@@ -5,6 +5,7 @@ var datasources = require('../create_datasource');
 var models = require('../create_model');
 var port = require('../update_port');
 var paymentKeysConfig = require('../paymentKeysConfig');
+var paymentConfig = require('../paymentConfig');
 
 
 var app = module.exports = loopback();
@@ -51,5 +52,6 @@ module.exports = {
   app: app,
   boot: boot,
   port: port,
-  paymentKeysConfig:paymentKeysConfig
+  paymentKeysConfig:paymentKeysConfig,
+  paymentConfig:paymentConfig
 }

@@ -1,4 +1,4 @@
-# Signup Login Module
+# Signup Login with Authorize.net Module
 The signup-login-with-authorizedotnet module is a Node.js based loopback script and it provides a fastest way to create user signup and login services with authentication and payment subscription with Authorize.net.
 
 
@@ -47,16 +47,16 @@ var database = new loopback.datasource(dbConfig);
 
 ##### Note: No need to declare email, username and password in schema but you need to add required field for username if you want it as required field.
 
-#### Must follow below model configuration for payment integration with Authorize.net 
+#### Must follow below model properties configuration for payment integration with Authorize.net 
 
 Model Configuration:
 
 ```sh
 var modelConfig = {
 
-   "name": "driver",
-   "properties": {
+   "name": "",  // model name example user, student, employee
    
+   "properties": {   
    "firstname": {
       "type": "string"
     },

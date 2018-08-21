@@ -3,7 +3,7 @@ var ApiContracts = require('authorizenet').APIContracts;
 var ApiControllers = require('authorizenet').APIControllers;
 var utils = require('../utils.js');
 var constants = require('../paymentKeysConfig.js');
-const loggingService = require('./loggingService');
+var paymentconstants = require('../paymentConfig.js');
 
 module.exports.createSubscription = function createSubscription (body,callback) {
 
@@ -13,13 +13,13 @@ module.exports.createSubscription = function createSubscription (body,callback) 
 	merchantAuthenticationType.setTransactionKey(constants.transactionKey);
 
 	var interval = new ApiContracts.PaymentScheduleType.Interval();
-	interval.setLength(1);
-	interval.setUnit(ApiContracts.ARBSubscriptionUnitEnum.MONTHS);
+	interval.setLength(paymentconstants.interval_length);
+	interval.setUnit(paymentconstants.interval_unit);
 
 	var paymentScheduleType = new ApiContracts.PaymentScheduleType();
 	paymentScheduleType.setInterval(interval);
 	paymentScheduleType.setStartDate(utils.getDate());
-	paymentScheduleType.setTotalOccurrences(5);
+	paymentScheduleType.setTotalOccurrences(9999);
 	paymentScheduleType.setTrialOccurrences(0);
 
 	var creditCard = new ApiContracts.CreditCardType();
@@ -55,8 +55,8 @@ module.exports.createSubscription = function createSubscription (body,callback) 
 	var arbSubscription = new ApiContracts.ARBSubscriptionType();
 	arbSubscription.setName(body.firstname+body.lastname);
 	arbSubscription.setPaymentSchedule(paymentScheduleType);
-	arbSubscription.setAmount(5);
-	arbSubscription.setTrialAmount(0);
+	arbSubscription.setAmount(paymentconstants.amount);
+	arbSubscription.setTrialAmount(paymentconstants.trail_amount);
 	arbSubscription.setPayment(payment);
 	arbSubscription.setOrder(orderType);
 	arbSubscription.setCustomer(customer);

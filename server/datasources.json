@@ -1,11 +1,1 @@
-{"db":{"name":"db","connector":"memory"},
-  "mongo": {
-       "host": "ds159180.mlab.com",
-        "port": 59180,
-        "url": "",
-        "database": "heroku_6mwrhsmk",
-        "password": "efg45fou5nnj8t27nq7leuhv7j",
-        "user": "heroku_6mwrhsmk",
-        "connector": "mongodb" 
-  }
-}
+{"db":{"name":"db","connector":"memory"},"mongo":{"host":"ds159180.mlab.com","port":59180,"url":"","database":"heroku_6mwrhsmk","password":"efg45fou5nnj8t27nq7leuhv7j","user":"heroku_6mwrhsmk","connector":"mongodb"}}
