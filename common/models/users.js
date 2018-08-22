@@ -73,10 +73,10 @@ module.exports = function(Users) {
 
  }
  
- Users.updateSubscription = function(where, data, fn) {  
+ Users.updateSubscription = function(credentials, fn) {  
   fn = fn || utils.createPromiseCallback();
-  var subscription_id =where.subscription_id;
- updateSubscription.updateSubscription(subscription_id, data, function (err, transaction_result) {
+  var subscription_id =credentials.subscription_id;
+ updateSubscription.updateSubscription(subscription_id, credentials , function (err, transaction_result) {
     if (err) {
       fn(err);   
     }
@@ -94,9 +94,9 @@ module.exports = function(Users) {
       else
       {
         var where= { "subscription_id":subscription_id};
-        data.subscription_status = "active";
+        credentials.subscription_status = "active";
 
-        Users.upsertWithWhere(where, data , function(err, user) { 
+        Users.upsertWithWhere(where, credentials , function(err, user) { 
                     if (err) {
             console.log('errors'+err)
                          
@@ -140,9 +140,7 @@ module.exports = function(Users) {
     return fn.promise;
 
   })
-
-
- }
+}
 
 
  Users.cancelSubscription = function(subscription_id, fn) {  
@@ -211,8 +209,8 @@ module.exports = function(Users) {
      
 
     Users.remoteMethod('updateSubscription',{
-      "accepts": [ {arg: 'where', type: 'object', http: {source: 'query'}, description: 'Criteria to match model instances'},
-    {arg: 'data', type: 'object', model: modelName, http: {source: 'body'}, description: 'An object of model property name/value pairs'}],
+      "accepts": [ 
+    {arg: 'credentials', type: 'object', model: modelName, http: {source: 'body'}, description: 'An object of update fields and subscription_id'}],
     "returns": [
       {
         "arg": "response",
